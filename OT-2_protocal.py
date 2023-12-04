@@ -11,11 +11,18 @@
 
 from opentrons import protocol_api
 
+# Metadata
+metadata = {
+    'protocolName': 'Cell Plating',
+    'author': 'Longwei Zhang',
+    'description': 'transfer trypsinized cells in a deep-well reservoir to 384 well plates.',
+    'apiLevel': '2.11',
+}
 def run(protocol: protocol_api.ProtocolContext):
     # Define labware
     reservoir = protocol.load_labware('nest_96_wellplate_2ml_deep', '1')
     plate_384 = protocol.load_labware('corning_384_wellplate_112ul_flat', '2')
-    pipette = protocol.load_instrument('p300_8', 'left', tip_racks=[protocol.load_labware('opentrons_96_tiprack_300ul', '3')])
+    pipette = protocol.load_instrument('p300', 'left', tip_racks=[protocol.load_labware('opentrons_96_tiprack_300ul', '3')])
 
     # Define transfer parameters
     source_well = 'A1'  # Update this with the actual well containing trypsinized cells
