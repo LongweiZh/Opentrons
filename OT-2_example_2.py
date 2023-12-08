@@ -2,7 +2,7 @@
 # -*- coding=utf-8 -*-
 
 #===================================
-# @Filename: OT-2_protocal.py
+# @Filename: OT-2_example_2.py
 # @Author: Longwei Zhang
 # @Create Time: 2023-11-30 15:03:05
 # @Email: lz539@georgetown.edu
